@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Responsive Layout 2</string>
+
+    <!-- Button texts -->
+    <string name="button_cancel">Cancel</string>
+    <string name="button_change">Change</string>
+
+    <!-- TextView contents (shared by all three layout variants) -->
+    <string name="text_header">Responsive UI Demo</string>
+    <string name="text_subheader">Orientation &amp; Width Qualifiers</string>
+    <string name="text_description">This application demonstrates alternative responsive layouts in Android. The default portrait layout uses a vertical LinearLayout (from Practical 1). When the device is rotated to landscape, a two-pane LinearLayout is loaded automatically. On devices whose smallest screen dimension is at least 600dp (e.g. 7-inch tablets), a two-pane ConstraintLayout is loaded instead. No Java code changes are required - the resource system picks the right layout for the current configuration.</string>
+    <string name="text_info">Part 1: Orientation Qualifier (layout-land)\nPart 2: Smallest Width Qualifier (layout-sw600dp)\nStudent: Guo Yuqi (20243006972)</string>
+</resources>

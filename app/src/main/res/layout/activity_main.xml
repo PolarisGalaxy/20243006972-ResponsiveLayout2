@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Part 1: LinearLayout with Weights - Portrait (Default)
+
+    This is the default layout used in portrait orientation and on small screens.
+    It is the original layout from Practical 1, kept as the foundation.
+
+    Key responsive design principles:
+    - LinearLayout as root with vertical orientation
+    - layout_weight for proportional space distribution
+    - 0dp for dimensions in the weighted direction
+    - match_parent and wrap_content used appropriately
+    - No hard-coded pixel (px) dimensions
+
+    Author: Guo Yuqi
+    Student ID: 20243006972
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <!-- Header TextView - Uses weight to take available space proportionally -->
+    <TextView
+        android:id="@+id/text_header"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/text_header"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_700"
+        android:padding="8dp" />
+
+    <!-- Subheader TextView - Uses weight for proportional spacing -->
+    <TextView
+        android:id="@+id/text_subheader"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/text_subheader"
+        android:textSize="18sp"
+        android:textColor="@color/purple_500"
+        android:padding="8dp" />
+
+    <!-- Description TextView - Uses weight for proportional spacing -->
+    <TextView
+        android:id="@+id/text_description"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:text="@string/text_description"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:padding="8dp" />
+
+    <!-- Info TextView - Uses weight for proportional spacing -->
+    <TextView
+        android:id="@+id/text_info"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/text_info"
+        android:textSize="14sp"
+        android:textColor="@color/teal_700"
+        android:padding="8dp" />
+
+    <!-- Button Container - Horizontal LinearLayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="8dp">
+
+        <!-- Change Button - Uses weight to share horizontal space equally -->
+        <Button
+            android:id="@+id/button_change"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="@string/button_change"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@color/white" />
+
+        <!-- Cancel Button - Uses weight to share horizontal space equally -->
+        <Button
+            android:id="@+id/button_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="@string/button_cancel"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>
